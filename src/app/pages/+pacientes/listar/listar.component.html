@@ -1,0 +1,64 @@
+<div class="row">
+    <div class="col-md-9">
+        <ul>
+            <li class="nav-item hidden-xs-down search-box"><span class="tituloBusqueda"> Busqueda avanzada </span><a class="nav-link hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i class="ti-search"></i></a>
+                <form class="app-search">
+                    <input type="text" class="form-control" placeholder="Buscar paciente"> <a class="srh-btn"><i class="ti-close"></i></a> </form>
+            </li>
+        </ul>
+        <!-- <h4>Pacientes</h4> -->
+        <div class="row">
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-5">
+                <div class="row">
+                    <div class="col-md-7 center">
+                        <h5>Paciente</h5>
+                    </div>
+                    <div class="col-md-5 center">
+                            <h5>Edad</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2 center">
+                <h5>Hora cita</h5>
+            </div>
+            <div class="col-md-3 center">
+                <h5>Documento</h5>
+            </div>
+        </div>
+        <div class="card" *ngFor="let usuario of usuarios" (click)="goToDetail(usuario)">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-2 containerImg center">
+                        <img src="{{usuario.img}}" alt="user-img" class="img-circle"> 
+                    </div> 
+                    <div class="col-md-5 center">
+                        <div class="row">
+                            <div class="col-md-7">
+                                {{usuario.nombre}} {{usuario.apellidoP}} {{usuario.apellidoP}}
+                            </div>
+                            <div class="col-md-5">
+                                {{usuario.edadAnos}}a {{usuario.edadMeses}}m
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2 center">
+                        {{usuario.hora}}
+                    </div>
+                    <div class="col-md-3 center">
+                        {{usuario.dni}}
+                    </div>
+                </div>   
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <h4>Criterios busqueda</h4>
+        <div class="card">
+            <div class="card-body">
+            </div>
+        </div>
+    </div>
+</div>
