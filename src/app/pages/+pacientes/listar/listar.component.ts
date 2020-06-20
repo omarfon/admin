@@ -19,6 +19,7 @@ export class ListarComponent implements OnInit {
       especialidad:"cardiología",
       hora:"09:20",
       sexo: "mujer",
+      email: "juana.perez@prueba",
       dni:44539552
     },{
       nombre:"Juana",
@@ -30,6 +31,7 @@ export class ListarComponent implements OnInit {
       especialidad:"cardiología",
       hora:"09:40",
       sexo: "mujer",
+      email: "juana.perez@prueba",
       dni:44539552
     },{
       nombre:"Juana",
@@ -41,6 +43,7 @@ export class ListarComponent implements OnInit {
       especialidad:"cardiología",
       hora:"10:20",
       sexo: "mujer",
+      email: "juana.perez@prueba",
       dni:44539552
     },{
       nombre:"Juana",
@@ -52,6 +55,7 @@ export class ListarComponent implements OnInit {
       especialidad:"cardiología",
       hora:"10:40",
       sexo: "mujer",
+      email: "juana.perez@prueba",
       dni:44539552
     }
   ];
