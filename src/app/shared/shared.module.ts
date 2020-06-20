@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 import { HeaderComponent } from './header/header.component';
@@ -9,7 +10,8 @@ import { RouterModule } from '@angular/router';
 
 @NgModule({
     imports:[
-        RouterModule
+        RouterModule,
+        FormsModule
     ],
     declarations: [
         NopagefoundComponent,

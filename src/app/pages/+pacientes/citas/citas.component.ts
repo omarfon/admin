@@ -12,4 +12,8 @@ export class CitasComponent implements OnInit {
   ngOnInit() {
   }
 
+  openModalDetailPatient(){
+    console.log('abrir modal datos usuario');
+  }
+
 }
