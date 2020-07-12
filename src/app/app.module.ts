@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
 // Rutas
 
 
@@ -14,7 +13,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './login/register.component';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 //Firebase imports
 
@@ -40,9 +39,21 @@ import { AlergiasComponent } from './shared/paciente/alergias/alergias.component
 import { ContactosComponent } from './shared/paciente/contactos/contactos.component';
 import { FinanciadorComponent } from './shared/paciente/financiador/financiador.component';
 import { PacientesdoctorComponent } from './doctores/pacientesdoctor/pacientesdoctor.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AllergysComponent } from './modals/allergys/allergys.component';
+import { FinancersComponent } from './modals/financers/financers.component';
+import { ContactsComponent } from './modals/contacts/contacts.component';
+import { SeguimientoComponent } from './pages/+pacientes/seguimiento/seguimiento.component';
 
 
-
+//material modules
+//Dialog
+import { MatDialogModule, MatDialog } from '@angular/material/dialog';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { CreateDateComponent } from './modals/create-date/create-date.component';
+//
 
 
 @NgModule({
@@ -63,18 +74,36 @@ import { PacientesdoctorComponent } from './doctores/pacientesdoctor/pacientesdo
     AlergiasComponent,
     ContactosComponent,
     FinanciadorComponent,
-    PacientesdoctorComponent
+    PacientesdoctorComponent,
+    AllergysComponent,
+    FinancersComponent,
+    ContactsComponent,
+    CreateDateComponent,
+    SeguimientoComponent
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
+    AngularFirestoreModule,
     AppRoutingModule,
     SharedModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatDialogModule,
+    MatMenuModule,
+    MatIconModule,
+    MatButtonModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    AllergysComponent,
+    FinancersComponent,
+    ContactsComponent,
+    CreateDateComponent
+  ]
 })
 export class AppModule { }

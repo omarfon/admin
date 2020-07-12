@@ -16,34 +16,41 @@ import { CitasComponent } from './pages/+pacientes/citas/citas.component';
 import { DoctoresallComponent } from './doctores/doctoresall/doctoresall.component';
 import { CrearcitaComponent } from './pages/+pacientes/crearcita/crearcita.component';
 import { PacientesdoctorComponent } from './doctores/pacientesdoctor/pacientesdoctor.component';
+import { SeguimientoComponent } from './pages/+pacientes/seguimiento/seguimiento.component';
 
 
 
 const routes: Routes = [
-    { path: '', 
-      component: PagesComponent,
-      children:[
+  {
+    path: '',
+    component: PagesComponent,
+    children: [
+      { path: 'home', component: PagesComponent },
+      { path: 'pacientes/listar', component: ListarComponent },
+      { path: 'pacientes/crear-cita', component: CrearcitaComponent },
       { path: 'progress', component: ProgressComponent },
       { path: 'graficas1', component: Graficas1Component },
       { path: 'crear', component: CrearComponent },
-      { path: 'listar', component: ListarComponent },
       { path: 'detailuser', component: DetailUserComponent },
       { path: 'citas', component: CitasComponent },
       { path: 'doctoresall', component: DoctoresallComponent },
-      { path: 'crear-cita', component: CrearcitaComponent },
       { path: 'pacientesdoctor', component: PacientesdoctorComponent },
-      ]},
-    { path: 'login', 
-      component: LoginComponent },
-    { path: 'register', 
-      component: RegisterComponent },
-    /* { path: '**', 
-      component: NopagefoundComponent }, */
-      { path: 'dashboard', component: DashboardComponent },
-      { path: 'pages', component: PagesComponent },
-      
-      { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-      
+      { path: 'seguimiento', component: SeguimientoComponent },
+    ]
+  },
+
+
+  {
+    path: 'register',
+    component: RegisterComponent
+  },
+  /* { path: '**', 
+    component: NopagefoundComponent }, */
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'pages', component: PagesComponent },
+
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+
 ];
 
 @NgModule({

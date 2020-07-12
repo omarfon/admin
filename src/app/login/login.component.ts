@@ -16,17 +16,17 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  signIn(){
- this.email = "admin@clini.com";
-    this.password = "123456" 
+  signIn() {
+    this.email = "admin@clini.com";
+    this.password = "123456";
     this.auth.sigIn(this.email, this.password)
-              .then(res =>{
-                this.router.navigate(['/pages']);
-                console.log('data retornada por login:',res);
-              }).catch(e =>{
-                console.log('e', e);
-              })
-    
+      .then(res => {
+        this.router.navigate(['/home']);
+        console.log('data retornada por login:', res);
+      }).catch(e => {
+        console.log('e', e);
+      })
+
   }
 
 }
